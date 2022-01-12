@@ -1,16 +1,21 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import SingleCard from './components/SingleCard'
+import helmet from './assets/img/helmet-1.png'
+import potion from './assets/img/potion-1.png'
+import ring from './assets/img/ring-1.png'
+import scroll from './assets/img/scroll-1.png'
+import shield from './assets/img/shield-1.png'
+import sword from './assets/img/sword-1.png'
 
 const cardImages = [
-  { "src": "/img/helmet-1.png", matched: false },
-  { "src": "/img/potion-1.png", matched: false },
-  { "src": "/img/ring-1.png", matched: false },
-  { "src": "/img/scroll-1.png", matched: false },
-  { "src": "/img/shield-1.png", matched: false },
-  { "src": "/img/sword-1.png", matched: false },
+  { "src": "./assets/img/helmet-1.png", matched: false, "img": helmet },
+  { "src": "./assets/img/potion-1.png", matched: false, "img": potion },
+  { "src": "./assets/img/ring-1.png", matched: false, "img": ring },
+  { "src": "./assets/img/scroll-1.png", matched: false,"img": scroll },
+  { "src": "./assets/img/shield-1.png", matched: false, "img": shield },
+  { "src": "./assets/img/sword-1.png", matched: false, "img": sword },
 ]
-
 function App() {
   const [cards, setCards] = useState([])
   const [turns, setTurns] = useState(0)
@@ -32,7 +37,6 @@ function App() {
 
   // handle a choice
   const handleChoice = (card) => {
-    console.log(card)
     choiceOne ? setChoiceTwo(card) : setChoiceOne(card)
   }
 
