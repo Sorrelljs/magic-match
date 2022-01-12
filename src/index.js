@@ -6,7 +6,6 @@ import helmet from './assets/img/sword-1.png'
 
 ReactDOM.render(
   <React.StrictMode>
-    <img src={helmet} alt="" />
     <App />
   </React.StrictMode>,
   document.getElementById('root')
